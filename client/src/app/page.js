@@ -1,3 +1,5 @@
+import StoreHeading from '@/components/StoreHeading'
+import ProductListings from '@/components/ProductListings'
 
 export const metadata = {
     title: 'PetControl',
@@ -6,9 +8,10 @@ export const metadata = {
 const Home = () => {
 
     return (
-        <>
-            <span>Site de animais</span>
-        </>
+      <div className="mx-auto max-w-6xl">
+        <StoreHeading />
+        <ProductListings products={[{},{}]} />
+    </div>
     )
 }
 
