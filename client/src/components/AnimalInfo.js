@@ -1,6 +1,6 @@
 import Price from '@/components/Price'
 
-function ProductInfo({ title, description, price }) {
+function AnimalInfo({ title, description, price }) {
   return (
     <div className=" font-primary">
       <h1 className="leading-relaxed font-extrabold text-3xl text-palette-primary py-2 sm:py-4">
@@ -20,4 +20,4 @@ function ProductInfo({ title, description, price }) {
   )
 }
 
-export default ProductInfo
+export default AnimalInfo

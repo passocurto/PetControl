@@ -2,17 +2,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Price from '@/components/Price'
 
-function ProductCard({ product }) {
-  //const handle = product.node.handle
+function AnimalCard({ Animal }) {
+  //const handle = Animal.node.handle
   const title = 'Lindo nene';
-  const description = 'Linda descricao'; //product.node.description
-  const price = 200.00;  //product.node.variants.edges[0].node.price
+  const description = 'Linda descricao'; //Animal.node.description
+  const price = 200.00;  //Animal.node.variants.edges[0].node.price
 
-  const imageNode = 0//product.node.images.edges[0].node
+  const imageNode = 0//Animal.node.images.edges[0].node
 
   return (
     // <Link
-    //   href={`/products/${handle}`}
+    //   href={`/Animals/${handle}`}
     //   passHref
     // >
       <a className="h-120 w-72 rounded shadow-lg mx-auto border border-palette-lighter">
@@ -42,4 +42,4 @@ function ProductCard({ product }) {
   )
 }
 
-export default ProductCard
+export default AnimalCard

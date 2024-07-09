@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { useCartContext, useAddToCartContext } from '@/context/Store'
 
-function ProductForm({ title, handle, variants, setVariantPrice, mainImg }) {
+function AnimalForm({ title, handle, variants, setVariantPrice, mainImg }) {
   const [quantity, setQuantity] = useState(1)
   const [variantId, setVariantId] = useState(variants[0].node.id)
   const [variant, setVariant] = useState(variants[0])
@@ -11,10 +11,10 @@ function ProductForm({ title, handle, variants, setVariantPrice, mainImg }) {
   const addToCart = useAddToCartContext()
 
   const atcBtnStyle = isLoading ?
-    `pt-3 pb-2 bg-palette-primary text-white w-full mt-2 rounded-sm font-primary font-semibold text-xl flex 
+    `pt-3 pb-2 bg-palette-primary text-white w-full mt-2 rounded-sm font-primary font-semibold text-xl flex
                       justify-center items-baseline  hover:bg-palette-dark opacity-25 cursor-none`
     :
-    `pt-3 pb-2 bg-palette-primary text-white w-full mt-2 rounded-sm font-primary font-semibold text-xl flex 
+    `pt-3 pb-2 bg-palette-primary text-white w-full mt-2 rounded-sm font-primary font-semibold text-xl flex
                       justify-center items-baseline  hover:bg-palette-dark`
 
   function handleSizeChange(e) {
@@ -32,9 +32,9 @@ function ProductForm({ title, handle, variants, setVariantPrice, mainImg }) {
     // update store context
     if (quantity !== '') {
       addToCart({
-        productTitle: title,
-        productHandle: handle,
-        productImage: mainImg,
+        AnimalTitle: title,
+        AnimalHandle: handle,
+        AnimalImage: mainImg,
         variantId: varId,
         variantPrice: variant.node.price,
         variantTitle: variant.node.title,
@@ -103,4 +103,4 @@ function ProductForm({ title, handle, variants, setVariantPrice, mainImg }) {
   )
 }
 
-export default ProductForm
+export default AnimalForm

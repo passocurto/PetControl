@@ -1,5 +1,5 @@
 import StoreHeading from '@/components/StoreHeading'
-import ProductListings from '@/components/ProductListings'
+import ProductListings from '@/components/AnimalListings'
 import { getAllProductsInCollection } from '@/lib/shopify'
 
 function IndexPage({ products }) {
@@ -7,7 +7,7 @@ function IndexPage({ products }) {
   return (
     <div className="mx-auto max-w-6xl">
       <StoreHeading />
-      <ProductListings products={products} />      
+      <ProductListings products={products} />
     </div>
   )
 }

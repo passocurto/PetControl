@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
-function ProductImage({ images }) {
+function AnimalImage({ images }) {
   const [mainImg, setMainImg] = useState(images[0].node)
   const ref = useRef()
 
@@ -63,4 +63,4 @@ function ProductImage({ images }) {
   )
 }
 
-export default ProductImage
+export default AnimalImage
